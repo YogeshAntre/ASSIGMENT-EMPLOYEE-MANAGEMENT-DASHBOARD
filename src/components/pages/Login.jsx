@@ -6,7 +6,7 @@ import {
   MDBBtn,
   MDBInput,
   MDBCheckbox,
-  MDBCard
+  MDBCar
 } from "mdb-react-ui-kit";
 import { useAuth } from "../context/AuthContext";
 

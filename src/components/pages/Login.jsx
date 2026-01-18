@@ -6,7 +6,7 @@ import {
   MDBBtn,
   MDBInput,
   MDBCheckbox,
-  MDBCar
+  MDBCard
 } from "mdb-react-ui-kit";
 import { useAuth } from "../context/AuthContext";
 
@@ -20,9 +20,8 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // ✅ Mock credentials
     if (username === "admin" && password === "admin123") {
-      login(); // Dashboard will render automatically
+      login();
     } else {
       setError("Invalid username or password");
     }
@@ -34,7 +33,6 @@ function Login() {
         <p className="text-center h1 fw-bold mb-5">Login</p>
 
         <MDBRow>
-          {/* Left Image */}
           <MDBCol md="6">
             <img
               src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
@@ -43,7 +41,6 @@ function Login() {
             />
           </MDBCol>
 
-          {/* Right Form */}
           <MDBCol md="6">
             <form onSubmit={handleSubmit}>
               <MDBInput
@@ -67,7 +64,6 @@ function Login() {
 
               <div className="d-flex justify-content-between mb-4">
                 <MDBCheckbox label="Remember me" />
-               
               </div>
 
               {error && <p className="text-danger">{error}</p>}
@@ -86,4 +82,5 @@ function Login() {
     </MDBContainer>
   );
 }
+
 export default Login;

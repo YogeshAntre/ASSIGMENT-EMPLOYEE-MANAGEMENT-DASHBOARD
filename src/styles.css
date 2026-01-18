@@ -1,0 +1,34 @@
+body { font-family: Arial; background:#f5f7fb; }
+.container { padding:20px; }
+.card { background:#fff; padding:15px; margin:10px 0; border-radius:8px; }
+.center { display:flex; height:100vh; justify-content:center; align-items:center; }
+button { padding:6px 12px; margin:4px; }
+table { width:100%; background:#fff; border-collapse:collapse; }
+th, td { padding:8px; border:1px solid #ddd; }
+.summary { display:flex; gap:20px; margin:10px 0; }
+
+
+
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+  
+    .print-area,
+    .print-area * {
+      visibility: visible;
+    }
+  
+    .print-area {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  
+    button {
+      display: none;
+    }
+  }
+  
